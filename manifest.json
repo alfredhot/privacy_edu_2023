@@ -1,0 +1,26 @@
+{
+  "name": "privacy_edu_2023",
+  "description": "빨리빨리",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.privacy.go.kr/*"],
+      "js": ["js/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["js/inject.js", "js/inject_frame.js"],
+      "matches": ["https://www.privacy.go.kr/*"]
+    },
+  ]
+}
