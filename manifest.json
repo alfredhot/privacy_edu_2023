@@ -21,6 +21,6 @@
     {
       "resources": ["js/inject.js", "js/inject_frame.js"],
       "matches": ["https://www.privacy.go.kr/*"]
-    },
+    }
   ]
 }
