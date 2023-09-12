@@ -34,21 +34,24 @@ function injectCustomJs() {
         // buttonRun.innerHTML = 'auto run';
         // contentsFrame.document.body.prepend(buttonRun);
         //
+        const descSpan = document.createElement('span');
+        descSpan.setAttribute('id', 'descSpan');
+        descSpan.setAttribute('style', 'position: absolute; background: #ffa4a4; z-index: 999; padding: 10px; top: 0; right: 0; font-size: 12px;')
+        descSpan.innerHTML = "<br/>'video jump' 클릭, 영상완료 까지 대기 후 영상 우측하단 '>' 클릭 하여 다음 수업으로 이동하세요. <br/>퀴즈는 점프 안됨으로, 8초대기 후 교육종료 하시면 됩니다.<br/>* 퀴즈가 마지막 영상이 아닌 경우, 전부 풀고 다음 영상으로 넘어가야 교육인증 받습니다.";
         const buttonInit = document.createElement('button');
         buttonInit.setAttribute('type', 'button');
         buttonInit.setAttribute('onclick', 'initCurrentPage()');
         buttonInit.innerHTML = 'init';
-        contentsFrame.document.body.prepend(buttonInit);
+        descSpan.prepend(buttonInit);
 
         const buttonJump = document.createElement('button');
         buttonJump.setAttribute('type', 'button');
         buttonJump.setAttribute('onclick', 'videoJump()');
         buttonJump.innerHTML = 'video jump';
-        contentsFrame.document.body.prepend(buttonJump);
+        // contentsFrame.document.body.prepend(buttonJump);
+        descSpan.prepend(buttonJump);
 
-        const descSpan = document.createElement('span');
-        descSpan.setAttribute('id', 'descSpan');
-        descSpan.innerHTML = "'video jump' 클릭, 영상완료 까지 대기 후 영상 우측하단 '>' 클릭 하여 다음 수업으로 이동하세요.";
+        contentsFrame.document.body.prepend(descSpan);
     }
 }
 document.addEventListener('DOMContentLoaded', function () {
