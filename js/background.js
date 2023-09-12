@@ -1,4 +1,4 @@
 
-chrome.runtime.onInstalled.addListener(() => {
-    console.log('background on installed')
-});
+// chrome.runtime.onInstalled.addListener(() => {
+//     console.log('background on installed')
+// });
