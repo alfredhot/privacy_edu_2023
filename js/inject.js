@@ -1,6 +1,7 @@
 console.log("I'm injected!")
 const innerFrame = window.frames['frame']
 
+let autoRun = false
 const videoJump = ()=> {
     const video = innerFrame.document.getElementById('video')
     video.currentTime = video.duration - 1
@@ -8,7 +9,33 @@ const videoJump = ()=> {
 const initCurrentPage = () => {
     next_click('01.html','N')
 }
-// let autoRun = false
+
+const stopRunning = () => {
+    autoRun = false
+}
+const runClick = () => {
+    autoRun = true
+    videoJump()
+    const waitingInterval = setInterval(()=> {
+        const video = innerFrame.document.getElementById('video')
+        console.log("interval waiting...", video.currentTime, video.duration)
+        if(isNaN(video.duration) || video.currentTime >= video.duration) {
+            clearInterval(waitingInterval)
+            if(!isNaN(video.duration) && autoRun){
+                setTimeout(() => {
+                    innerFrame.document.getElementById('nextBtn').click();
+                    setTimeout(() => {
+                        if(autoRun) {
+                            runClick();
+                        }
+                    }, 3000)
+                }, 1000)
+            }
+
+        }
+    }, 500)
+}
+
 // const goClick = () => {
 //     const currentPage = parseInt(parent.document.getElementById('lastStudyContentsPath2').value)
 //     const isLastPage = parent.document.getElementById('lastPgYn').value === 'Y'
@@ -59,9 +86,7 @@ const initCurrentPage = () => {
 //     }, duration + 5000)
 // }
 
-// const stopRunning = () => {
-//     autoRun = false
-// }
+
 
 // const getDuration = () => {
 //     return innerFrame.document.getElementById('video').duration

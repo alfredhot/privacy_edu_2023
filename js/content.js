@@ -22,18 +22,7 @@ function injectCustomJs() {
         // button.innerHTML = 'next';
         // contentsFrame.document.body.prepend(button);
         //
-        // const buttonStop = document.createElement('button');
-        // buttonStop.setAttribute('type', 'button');
-        // buttonStop.setAttribute('onclick', 'stopRunning()');
-        // buttonStop.innerHTML = 'stop auto';
-        // contentsFrame.document.body.prepend(buttonStop);
-        //
-        // const buttonRun = document.createElement('button');
-        // buttonRun.setAttribute('type', 'button');
-        // buttonRun.setAttribute('onclick', 'runClick()');
-        // buttonRun.innerHTML = 'auto run';
-        // contentsFrame.document.body.prepend(buttonRun);
-        //
+
         const descSpan = document.createElement('span');
         descSpan.setAttribute('id', 'descSpan');
         descSpan.setAttribute('style', 'position: absolute; background: #ffa4a4; z-index: 999; padding: 10px; top: 0; right: 0; font-size: 12px;')
@@ -43,6 +32,18 @@ function injectCustomJs() {
         buttonInit.setAttribute('onclick', 'initCurrentPage()');
         buttonInit.innerHTML = 'init';
         descSpan.prepend(buttonInit);
+
+        const buttonStop = document.createElement('button');
+        buttonStop.setAttribute('type', 'button');
+        buttonStop.setAttribute('onclick', 'stopRunning()');
+        buttonStop.innerHTML = 'stop auto';
+        descSpan.prepend(buttonStop);
+
+        const buttonRun = document.createElement('button');
+        buttonRun.setAttribute('type', 'button');
+        buttonRun.setAttribute('onclick', 'runClick()');
+        buttonRun.innerHTML = 'auto run';
+        descSpan.prepend(buttonRun);
 
         const buttonJump = document.createElement('button');
         buttonJump.setAttribute('type', 'button');

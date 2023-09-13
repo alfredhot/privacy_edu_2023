@@ -20,9 +20,16 @@ git clone https://github.com/alfredhot/privacy_edu_2023.git
 5. 설치 완료
 
 ## 사용
+### 수동
 ![video jump](https://github.com/alfredhot/privacy_edu_2023/blob/main/images/video_jump.png?raw=true)
 1. 교육 영상 페이지로 이동
 2. 영상 재생 시작하면 'video jump' 버튼 클릭, 영상이 마지막 1초로 점핑된다
 3. 영상 재생완료 후 > 클릭 하여 다음 영상으로 이동
 4. 퀴즈 페이지는 8초 대기 후 '교육종료'
 5. \* 일부 교육 과정에서는 퀴즈를 풀어야 다음 영상으로 넘어갈 수 있음, 이런경우 퀴즈다음 영상도 시청후 교육종료 가능.
+### 자동 [new]
+1. 영상 재생 시작 하면 'auto_run' 클릭
+2. 퀴즈는 수동
+
+## 주의사항
+교육과정 완료후 수료증 발급시 교육시간이 기재 되어 발급 됩니다.
