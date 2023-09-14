@@ -1,9 +1,9 @@
 console.log("I'm injected!")
-const innerFrame = window.frames['frame']
+const innerFrame = window.frames[0]
 
 let autoRun = false
 const videoJump = ()=> {
-    const video = innerFrame.document.getElementById('video')
+    const video = innerFrame.document.getElementsByTagName('video')[0]
     video.currentTime = video.duration - 1
 }
 const initCurrentPage = () => {
@@ -17,7 +17,7 @@ const runClick = () => {
     autoRun = true
     videoJump()
     const waitingInterval = setInterval(()=> {
-        const video = innerFrame.document.getElementById('video')
+        const video = innerFrame.document.getElementsByTagName('video')[0]
         console.log("interval waiting...", video.currentTime, video.duration)
         if(isNaN(video.duration) || video.currentTime >= video.duration) {
             clearInterval(waitingInterval)
