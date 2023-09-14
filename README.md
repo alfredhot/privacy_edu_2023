@@ -8,7 +8,7 @@ git clone https://github.com/alfredhot/privacy_edu_2023.git
 ```
 **OR**
 
-[여기](https://github.com/alfredhot/privacy_edu_2023/archive/refs/tags/v0.0.3.zip) 클릭 하여 다운 받고 압축 풀기
+[여기](https://github.com/alfredhot/privacy_edu_2023/archive/refs/tags/v0.0.4.zip) 클릭 하여 다운 받고 압축 풀기
 
 ## 크롬 설정
 1. chrome 주소창에서 `chrome://extensions/` 로 이동.
